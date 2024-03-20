@@ -2,15 +2,16 @@ vQuery("div").on("click", function () {
   console.log("Clicked!");
 });
 
-// vQuery.ajax({
-//   url: "https://api.example.com/data",
-//   success: function (data) {
-//     console.log(data);
-//   },
-//   error: function () {
-//     console.error("An error occurred.");
-//   },
-// });
+vQuery.ajax({
+  url: "https://api.example.com/data",
+  method: "GET",
+  success: function (data) {
+    console.log(data);
+  },
+  error: function () {
+    console.error("An error occurred.");
+  },
+});
 
 vQuery("div").each(function (i, el) {
   console.log("Element " + i + " is " + el.outerHTML);

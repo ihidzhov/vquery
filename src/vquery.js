@@ -188,6 +188,26 @@
       return this;
     },
 
+    insertBefore: function (selector) {
+      var elements = vQuery(selector);
+      for (var i = 0; i < this.length; i++) {
+        for (var j = 0; j < elements.length; j++) {
+          elements[j].insertAdjacentElement("beforebegin", this[i]);
+        }
+      }
+      return this;
+    },
+
+    insertAfter: function (selector) {
+      var elements = vQuery(selector);
+      for (var i = 0; i < this.length; i++) {
+        for (var j = 0; j < elements.length; j++) {
+          elements[j].insertAdjacentElement("afterend", this[i]);
+        }
+      }
+      return this;
+    },
+
     attr: function (name, value) {
       if (value === undefined) {
         return this[0] && this[0].getAttribute(name);
