@@ -1,6 +1,4 @@
-# vquery
-
-Vanilla Query
+# vQuery
 
 Vanilla Query is like jQuery library with basic methods.
 
